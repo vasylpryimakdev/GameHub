@@ -1,73 +1,103 @@
-# React + TypeScript + Vite
+# 🎮 Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive React application for discovering video games using the RAWG API.
 
-Currently, two official plugins are available:
+Game Hub allows users to browse games, filter them by platform and release date, and explore detailed information in a clean and intuitive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 _Add your deployed link here (e.g. Vercel)_
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🔎 Browse popular video games
+- 🎯 Filter games by platform
+- 📅 Filter by release date
+- 🌙 Dark mode support
+- ⚡ Fast performance with Vite
+- 📱 Fully responsive layout
+- 🧩 Clean and reusable component architecture
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Tech Stack
+
+- **React 18**
+- **TypeScript**
+- **Chakra UI**
+- **Axios**
+- **Vite**
+- **RAWG Video Games Database API**
+
+---
+
+## 📂 Project Structure
+
+src/
+│
+├── components/ # Reusable UI components
+├── hooks/ # Custom React hooks
+├── services/ # API logic (axios instance)
+├── assets/ # Images and static files
+├── theme/ # Chakra UI theme configuration
+└── main.tsx # Application entry point
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/game-hub.git
+cd game-hub
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Run the development server
+
+npm run dev
+
+### The app will be available at
+
+http://localhost:5173
+
+## 🔑 Environment Variables
+
+### Create a .env file in the root directory:
+
+VITE_RAWG_API_KEY=your_api_key_here
+
+### Then update your axios instance:
+
+params: {
+key: import.meta.env.VITE_RAWG_API_KEY,
+}
+
+## 🌍 API
+
+### This project uses the RAWG Video Games Database API.
+
+Documentation:
+https://rawg.io/apidocs
+
+## 🚀 Deployment
+
+### To deploy with Vercel:
+
+npm i -g vercel
+vercel
+
+### Or connect your GitHub repository directly through the Vercel dashboard.
+
+## 👨‍💻 Author
+
+GitHub: https://github.com/vasylpryimakdev
+LinkedIn: https://www.linkedin.com/in/vasyl-pryimak-64a204384
