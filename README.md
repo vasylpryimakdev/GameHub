@@ -37,6 +37,7 @@ Game Hub allows users to browse games, filter them by platform and release date,
 
 ## 📂 Project Structure
 
+```
 src/
 │
 ├── components/ # Reusable UI components
@@ -45,6 +46,7 @@ src/
 ├── assets/ # Images and static files
 ├── theme/ # Chakra UI theme configuration
 └── main.tsx # Application entry point
+```
 
 ---
 
