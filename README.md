@@ -59,27 +59,37 @@ cd game-hub
 
 ### Install dependencies:
 
+```bash
 npm install
+```
 
 ### Run the development server
 
+```bash
 npm run dev
+```
 
 ### The app will be available at
 
+```bash
 http://localhost:5173
+```
 
 ## 🔑 Environment Variables
 
 ### Create a .env file in the root directory:
 
+```ts
 VITE_RAWG_API_KEY=your_api_key_here
+```
 
 ### Then update your axios instance:
 
+```ts
 params: {
 key: import.meta.env.VITE_RAWG_API_KEY,
 }
+```
 
 ## 🌍 API
 
@@ -92,8 +102,10 @@ https://rawg.io/apidocs
 
 ### To deploy with Vercel:
 
+```bash
 npm i -g vercel
 vercel
+```
 
 ### Or connect your GitHub repository directly through the Vercel dashboard.
 
