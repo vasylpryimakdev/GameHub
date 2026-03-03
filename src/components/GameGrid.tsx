@@ -1,4 +1,4 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { GameQuery } from "../App";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
@@ -14,6 +14,22 @@ const GameGrid = ({ gameQuery }: Props) => {
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   if (error) return <Text>{error}</Text>;
+
+  if (data.length === 0 && !isLoading) {
+    return (
+      <Flex
+        direction="column"
+        justify="center"
+        align="center"
+        minHeight="60vh"
+        width="100%"
+      >
+        <Heading as="h2" size="2xl" textAlign="center" color="gray.500">
+          😔 Oops! No games found with these parameters.
+        </Heading>
+      </Flex>
+    );
+  }
 
   return (
     <SimpleGrid
