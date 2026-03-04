@@ -4,19 +4,18 @@ export interface Genre {
   name: string;
   image_background: string;
 }
-import apiClient, { FetchResponse } from "../services/api-client";
+import APIClient from "../services/api-client";
 import genres from "../data/genres";
 import { OneDay } from "../constants";
+
+const apiClient = new APIClient<Genre>("/genres");
 
 const useGenres = () =>
   useQuery({
     queryKey: ["genres"],
-    queryFn: () =>
-      apiClient
-        .get<FetchResponse<Genre>>("genres")
-        .then((res) => res.data.results),
+    queryFn: apiClient.getAll,
     staleTime: OneDay,
-    initialData: genres,
+    initialData: { count: genres.length, results: genres },
   });
 
 export default useGenres;
