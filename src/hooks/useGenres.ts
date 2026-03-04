@@ -7,6 +7,7 @@ export interface Genre {
 import apiClient from "../services/api-client";
 import { FetchResponse } from "./useData";
 import genres from "../data/genres";
+import { OneDay } from "../constants";
 
 const useGenres = () =>
   useQuery({
@@ -15,7 +16,7 @@ const useGenres = () =>
       apiClient
         .get<FetchResponse<Genre>>("genres")
         .then((res) => res.data.results),
-    staleTime: 24 * 60 * 60 * 1000, // 24h
+    staleTime: OneDay,
     initialData: genres,
   });
 
