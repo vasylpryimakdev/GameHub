@@ -6,7 +6,7 @@ export interface Genre {
 }
 import APIClient from "../services/api-client";
 import genres from "../data/genres";
-import { OneDay } from "../constants";
+import ms from "ms";
 
 const apiClient = new APIClient<Genre>("/genres");
 
@@ -14,7 +14,7 @@ const useGenres = () =>
   useQuery({
     queryKey: ["genres"],
     queryFn: apiClient.getAll,
-    staleTime: OneDay,
+    staleTime: ms("24h"),
     initialData: genres,
   });
 
