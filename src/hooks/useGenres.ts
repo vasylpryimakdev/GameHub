@@ -4,8 +4,7 @@ export interface Genre {
   name: string;
   image_background: string;
 }
-import apiClient from "../services/api-client";
-import { FetchResponse } from "./useData";
+import apiClient, { FetchResponse } from "../services/api-client";
 import genres from "../data/genres";
 import { OneDay } from "../constants";
 
