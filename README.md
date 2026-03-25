@@ -6,10 +6,15 @@ Game Hub allows users to browse games, filter them by platform and release date,
 
 ---
 
-## 🚀 Live Demo
+## 🚀 [Live Demo](https://game-hub-ten-rho.vercel.app/)
 
-🔗 **Play the app here:**  
-https://game-hub-ten-rho.vercel.app/
+## 📸 Screenshots
+
+### Homepage
+![Homepage](./screenshots/homepage.png)
+
+### Game Detail Page
+![Game Detail Page](./screenshots/game-detail.png)
 
 ---
 
